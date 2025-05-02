@@ -28,3 +28,43 @@ Build a React application that fetches data from the PokeAPI (https://pokeapi.co
 - Implement proper loading and error states
 - Structure your code with reusable components
 - Handle edge cases (no results, API errors, etc.)
+
+
+# Assignment 2 : Advanced Data Explorer
+
+## Overview
+Building on Round 1, create an enhanced Pokémon explorer application with more advanced features including pagination, detailed views, favorites functionality, and improved state management.
+
+## Requirements
+Enhanced List View
+Implement pagination with configurable items per page (10, 20, 50)
+Add sorting options (by ID, name, alphabetically)
+Include filtering by multiple types simultaneously
+
+
+## Detailed View
+Create a detailed view for each Pokémon showing:
+All stats (HP, Attack, Defense, etc.)
+Abilities
+Moves
+Evolution chain
+Implement routing to navigate between list and detail views
+
+
+## Favorites System
+Allow users to mark Pokémon as favorites
+Create a separate view to display favorite Pokémon
+Persist favorites in localStorage so they remain after page refresh
+
+
+## Advanced Features
+Implement a comparison tool to compare stats of two Pokémon
+Add a "random Pokémon" button that loads a random entry
+Include error boundaries to prevent the entire app from crashing
+
+## Technical Requirements
+Use React Context API for state management
+Implement performance optimizations (useMemo, useCallback)
+Create custom hooks for reusable logic
+Structure your project into logical folders (components, hooks, contexts, etc.)
+Use React Router for navigation

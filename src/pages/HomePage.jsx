@@ -105,7 +105,7 @@ import React, { useState, useContext, useMemo } from 'react';
     <PokemonComparison />
 
 
-    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2, flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>
+    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2, flexDirection: { xs: 'column', md: 'row' }, gap: 2}}>
     <Box sx={{ display: 'flex', gap: 2, mb: 2, flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center' }}>
         <SortOptions />
         <TypeFilter />
