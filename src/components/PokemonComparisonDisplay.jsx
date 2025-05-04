@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from 'react';
  import { PokedexContext } from '../contexts/PokedexContext';
- import { Box, Typography, Grid, Card, CardContent, List, ListItem, ListItemText, Divider } from '@mui/material';
+ import { Box, Typography, Grid, Card, CardContent, List, ListItem, ListItemText } from '@mui/material';
  import { styled } from '@mui/material/styles';
 
  const ComparisonCard = styled(Card)(({ theme }) => ({
@@ -31,12 +31,12 @@ import React, { useContext, useMemo } from 'react';
   if (!pokemon1 || !pokemon2) {
    return <Typography>Select two Pokémon to compare.</Typography>;
   }
-  
+
   return (
    <Box mt={3} mb={4}>
     <Typography variant="h5" gutterBottom>Comparison</Typography>
-    <Grid container spacing={3}>
-     <Grid item xs={12} md={6}>
+    <Grid container spacing={3} justifyContent={'space-between'}>
+     <Grid item xs={12} md={6} sx={{ width: '48%' }}>  
       <ComparisonCard>
        <CardContent>
         <ComparisonTitle variant="h6">{pokemon1.name.charAt(0).toUpperCase() + pokemon1.name.slice(1)}</ComparisonTitle>
@@ -61,7 +61,7 @@ import React, { useContext, useMemo } from 'react';
        </CardContent>
       </ComparisonCard>
      </Grid>
-     <Grid item xs={12} md={6}>
+     <Grid item xs={12} md={6} sx={{ width: '48%' }}>
       <ComparisonCard>
        <CardContent>
         <ComparisonTitle variant="h6">{pokemon2.name.charAt(0).toUpperCase() + pokemon2.name.slice(1)}</ComparisonTitle>
