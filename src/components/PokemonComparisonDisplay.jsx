@@ -31,7 +31,7 @@ import React, { useContext, useMemo } from 'react';
   if (!pokemon1 || !pokemon2) {
    return <Typography>Select two Pokémon to compare.</Typography>;
   }
-
+  
   return (
    <Box mt={3} mb={4}>
     <Typography variant="h5" gutterBottom>Comparison</Typography>
@@ -40,8 +40,8 @@ import React, { useContext, useMemo } from 'react';
       <ComparisonCard>
        <CardContent>
         <ComparisonTitle variant="h6">{pokemon1.name.charAt(0).toUpperCase() + pokemon1.name.slice(1)}</ComparisonTitle>
-        <Typography><FeatureLabel>ID:</FeatureLabel> #{pokemon1.id}</Typography>
-        <Typography><FeatureLabel>Type:</FeatureLabel> {pokemon1?.types?.map(t => t?.type?.name?.charAt(0).toUpperCase() + t?.type?.name?.slice(1)).join(', ')}</Typography>
+        <Typography><FeatureLabel>ID: #{pokemon1.id}</FeatureLabel></Typography>
+        <Typography><FeatureLabel>Type: {pokemon1.types.map((type) => type.charAt(0).toUpperCase() + type.slice(1)).join(', ')}</FeatureLabel></Typography>
         <Typography><FeatureLabel>Stats:</FeatureLabel></Typography>
         <List dense>
          {pokemon1?.stats?.map(stat => (
@@ -65,8 +65,8 @@ import React, { useContext, useMemo } from 'react';
       <ComparisonCard>
        <CardContent>
         <ComparisonTitle variant="h6">{pokemon2.name.charAt(0).toUpperCase() + pokemon2.name.slice(1)}</ComparisonTitle>
-        <Typography><FeatureLabel>ID:</FeatureLabel> #{pokemon2.id}</Typography>
-        <Typography><FeatureLabel>Type:</FeatureLabel> {pokemon2?.types?.map(t => t?.type?.name?.charAt(0).toUpperCase() + t?.type?.name?.slice(1)).join(', ')}</Typography>
+        <Typography><FeatureLabel>ID: #{pokemon2.id}</FeatureLabel></Typography>
+        <Typography><FeatureLabel>Type: {pokemon2.types.map((type) => type.charAt(0).toUpperCase() + type.slice(1)).join(', ')}</FeatureLabel></Typography>
         <Typography><FeatureLabel>Stats:</FeatureLabel></Typography>
         <List dense>
          {pokemon2?.stats?.map(stat => (
