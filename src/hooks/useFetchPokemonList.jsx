@@ -27,7 +27,7 @@ const useFetchPokemonList = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1000');
+        const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
         if (!response.ok) {
           console.error('PokeAPI Response Error:', response.status, await response.text());
           throw new Error('Failed to fetch initial Pokémon list.');
